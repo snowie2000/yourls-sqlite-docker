@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+    php:
+        container_name: php_yourls
+        image: php:fpm
+        volumes:
+            - ./yourls:/opt/wwwroot/yourls
+        networks: 
+            - yourls
+        restart: unless-stopped
+    nginx:
+        container_name: nginx_yourls
+        image: nginx:latest
+        volumes:
+            - ./yourls:/opt/wwwroot/yourls
+            - ./conf:/etc/nginx/conf.d
+        depends_on:
+            - php
+        networks: 
+            - yourls
+        ports:
+            - "80:80"
+networks:
+        yourls:
+            driver: "bridge"
