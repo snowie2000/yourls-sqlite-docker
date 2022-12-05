@@ -8,7 +8,7 @@ An easy to use and full customizable dockerfile for yourls+sleeky+sqlite
 # usage
 1. apply write priviledge to `/yourls/user` folder with `chmod 777 yourls/user/ -R` so that the new sqlite database can be created.
 2. add your domain name to `conf/yourls.conf` file
-3. customize your yourls in `yours/user/config.php` file with yourls official instructions https://docs.yourls.org/
+3. customize your yourls in `yourls/user/config.php` file with yourls official instructions https://docs.yourls.org/
 4. change the port you wish to expose in `docker-compose.yml`
 5. run `docker compose up -d` to bring up the container
 
