@@ -15,7 +15,7 @@ div.share {
 	margin-right:1em;
 	padding:0 1em;
 	float:left;
-	height:140px;
+	height:160px;
 }
 #origlink{
 	display:inline-block;
@@ -25,7 +25,7 @@ div.share {
 	vertical-align:-2px;
 }
 #copybox {
-	width:250px;
+	width:300px;
 }
 #sharebox {
 	width:500px;
